@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #302D47;
+}
+
+.container-center-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1520px;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container-center-login main header.logo {
+  text-align: center;
+}
+.container-center-login main header.logo h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 109px;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+.container-center-login main header.logo h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #BFBFBF;
+  margin-bottom: 89px;
+  line-height: 1;
+}
+.container-center-login main .email-login {
+  display: flex;
+  flex-direction: column;
+}
+.container-center-login main .email-login input {
+  width: 316px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+.container-center-login main .email-login :focus {
+  border: 1px solid #6C63FF;
+}
+.container-center-login main .password-forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 58px;
+}
+.container-center-login main .password-forget a {
+  font-size: 14px;
+  color: #BFBFBF;
+}
+.container-center-login main .password-forget .button--purple {
+  width: 152px;
+  height: 40px;
+}
+.container-center-login main .footer p {
+  font-size: 16px;
+  color: #BFBFBF;
+  margin-bottom: 25px;
+}
+.container-center-login main .footer .button--purple {
+  width: 316px;
+  height: 40px;
+}
+
+.container-center-product-page {
+  max-width: 1366px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.container-center-product-page .container {
+  height: 100vh;
+  width: 100vw;
+}
+.container-center-product-page .container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 80px;
+}
+.container-center-product-page .container header .logo-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.container-center-product-page .container header .logo-box .logo {
+  margin-right: 45px;
+}
+.container-center-product-page .container header .logo-box .logo h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 51px;
+  color: white;
+}
+.container-center-product-page .container header .logo-box .logo h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  color: #BFBFBF;
+}
+.container-center-product-page .container header .logo-box .welcome {
+  font-size: 20px;
+  color: #BFBFBF;
+}
+.container-center-product-page .container header .buttons .product-register {
+  width: 271px;
+  height: 55px;
+  margin-right: 16px;
+}
+.container-center-product-page .container header .buttons .button--red {
+  width: 101px;
+  height: 55px;
+}
+.container-center-product-page .container section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 74px 70px;
+}
+.container-center-product-page .container section .my-store {
+  font-size: 32px;
+  color: white;
+}
+.container-center-product-page .container section .search {
+  display: flex;
+  flex-direction: row;
+  width: 375px;
+  height: 50px;
+  margin-right: 18px;
+}
+.container-center-product-page .container section .button--purple {
+  font-size: 16px;
+  width: 131px;
+  height: 50px;
+}
+.container-center-product-page .container main .product-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.container-center-product-page .container main .product-list .product-list-item {
+  background-color: rgba(191, 191, 191, 0.18);
+  border-radius: 16px;
+}
+.container-center-product-page .container main .product-list .bg-different {
+  background-color: rgba(185, 181, 255, 0.18);
+}
+
+::placeholder {
+  font-size: 20px;
+  color: #8D8BA4;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button--purple {
+  background-color: #6C63FF;
+  color: #BFBFBF;
+  border: none;
+  font-size: 20px;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button--purple:hover {
+  border: 1px solid #6C63FF;
+  background-color: #302D47;
+  color: white;
+  transition: 0.3s;
+}
+
+.button--red {
+  background-color: #EE4C4C;
+  color: #BFBFBF;
+  border: none;
+  font-size: 20px;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button--red:hover {
+  border: 1px solid #EE4C4C;
+  background-color: #302D47;
+  color: white;
+  transition: 0.3s;
+}
+
+input {
+  border-radius: 7px;
+  background-color: #3F3D56;
+  outline: none;
+  border: none;
+  padding: 22px;
+  color: #BFBFBF;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */

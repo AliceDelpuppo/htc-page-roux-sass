@@ -1,0 +1,246 @@
+@use '_variables.scss';
+@use '_mixins.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variables.$primary-font;
+}
+
+body {
+    background-color: variables.$background-color;
+}
+
+.container-center-login {
+    @include mixins.flex-center;
+    @include mixins.container-center-login;
+
+    main {
+
+        header.logo {
+            text-align: center;
+
+            h1{
+                font-family: variables.$secundary-font;
+                font-size: 109px;
+                font-weight: 900;
+                color: variables.$primary-color;
+                line-height: 1; 
+            }
+
+            h2 {
+                font-family: variables.$secundary-font;
+                font-size: 26px;
+                font-weight: 400;
+                color: variables.$text-color;
+                margin-bottom: 89px;
+                line-height: 1;
+            }
+        }
+
+        .email-login {
+            display: flex;
+            flex-direction: column;
+            
+            input {
+                width: 316px;
+                height: 40px;
+                margin-bottom: 16px;
+                }
+            
+                :focus {
+                    border: 1px solid variables.$button-color-main;
+            }
+        }
+
+        .password-forget {
+            @include mixins.flex-center;  
+            margin-bottom: 58px;
+
+            a {
+                font-size: 14px;
+                color: variables.$text-color;
+            }
+
+            .button--purple {
+                width: 152px;
+                height: 40px;
+            }
+        }
+
+        .footer {
+            p {
+                font-size: 16px;
+                color: variables.$text-color;
+                margin-bottom: 25px;
+            }
+
+            .button--purple {
+                width: 316px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.container-center-product-page {
+    @include mixins.container-center-products-page;
+    @include mixins.flex-center;
+    justify-content: center;
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+
+        header {
+            @include mixins.flex-center;
+            margin: 20px;
+            margin-bottom: 80px;
+
+            .logo-box{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                .logo {
+                    margin-right: 45px;
+
+                    h1 {
+                        font-family: variables.$secundary-font;
+                        font-size: 51px;
+                        color: variables.$primary-color;
+                    }
+    
+                    h2 {
+                        font-family: variables.$secundary-font;
+                        font-size: 11px;
+                        color: variables.$text-color;
+                    }
+                }
+    
+                .welcome {
+                    font-size: 20px;
+                    color: variables.$text-color;
+                }
+            }
+
+            .buttons {
+                .product-register {
+                    width: 271px;
+                    height: 55px;
+                    margin-right: 16px;
+                }
+
+                .button--red {
+                    width: 101px;
+                    height: 55px;
+                }           
+            }
+        }
+
+        section {
+            @include mixins.flex-center;
+            margin: 0 74px 70px;
+            
+            .my-store {
+                font-size: 32px;
+                color: variables.$primary-color;
+            }
+            
+            .search {
+                display: flex;
+                flex-direction: row;
+                width: 375px;
+                height: 50px;
+                margin-right: 18px;
+            }
+
+            .button--purple {
+                font-size: 16px;
+                width: 131px;
+                height: 50px;
+            }
+        }
+
+        main {
+            .product-list {
+                @include mixins.flex-center;
+                list-style: none;
+
+                .product-list-item {
+                    background-color: rgba($color: variables.$container-color1, $alpha: 0.18);
+                    border-radius: 16px;
+                }
+
+                .bg-different {
+                    background-color: rgba($color: variables.$container-color2, $alpha: 0.18);
+                }
+            }
+
+            
+
+        }
+    }
+    
+}
+
+::placeholder {
+    font-size: 20px;
+    color: variables.$placeholder-color;
+    font-weight: 300;    
+}
+
+a {
+    text-decoration: none;
+}
+
+.button--purple {
+    background-color: variables.$button-color-main;
+    color: variables.$text-color;
+    border: none;
+    font-size: 20px;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer; 
+}
+
+.button--purple:hover {
+    border: 1px solid variables.$button-color-main;
+    background-color: variables.$background-color;
+    color: variables.$primary-color;
+    transition: 0.3s;
+}
+
+.button--red {
+    background-color: variables.$button-color--red;
+    color: variables.$text-color;
+    border: none;
+    font-size: 20px;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button--red:hover {
+    border: 1px solid variables.$button-color--red;
+    background-color: variables.$background-color;
+    color: variables.$primary-color;
+    transition: 0.3s;
+}
+
+input {
+    border-radius: 7px;
+    background-color: variables.$background-input;
+    outline: none;
+    border: none;
+    padding: 22px;
+    color: variables.$text-color;
+    font-size: 16px;
+}
+
+
+
+

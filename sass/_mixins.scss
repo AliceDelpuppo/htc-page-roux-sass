@@ -1,0 +1,21 @@
+@use '_variables.scss';
+
+@mixin container-center-login {
+    max-width: variables.$container-width-login;
+    height: 100vh;
+    // width: 100%;
+    margin: 0 auto;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin container-center-products-page {
+    max-width: variables.$container-width-page;
+    height: 100vh;
+    // width: 100%;
+    margin: 0 auto;
+}
