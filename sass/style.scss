@@ -412,14 +412,14 @@ body {
                     justify-content: center;
 
                     @include mixins.tablet{
-                        width: 200px;
+                        width: 400px;
                     }
         
                     @include mixins.mobile{
                         width: 200px;
                     }
                     
-                    a {
+                    a {                        
                         color: variables.$primary-color;
                     }
             }

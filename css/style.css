@@ -409,7 +409,7 @@ body {
 }
 @media (min-width: 721px) and (max-width: 1160px) {
   .container-center-product-page .container footer .login-page {
-    width: 200px;
+    width: 400px;
     font-size: 20px;
   }
 }
