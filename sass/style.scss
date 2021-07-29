@@ -17,8 +17,18 @@ body {
 .container-center-login {
     @include mixins.flex-center;
     @include mixins.container-center-login;
+    padding: 20px;
 
     main {
+        margin-right: 20px;
+
+        @include mixins.tablet {
+            margin: 0 auto;
+        }
+
+        @include mixins.mobile {
+            margin: 0 auto;
+        }
 
         header.logo {
             text-align: center;
@@ -28,7 +38,11 @@ body {
                 font-size: 109px;
                 font-weight: 900;
                 color: variables.$primary-color;
-                line-height: 1; 
+                line-height: 1;
+
+                @include mixins.mobile {
+                    font-size: 80px;
+                }
             }
 
             h2 {
@@ -38,6 +52,10 @@ body {
                 color: variables.$text-color;
                 margin-bottom: 89px;
                 line-height: 1;
+
+                @include mixins.mobile {
+                    font-size: 20px;
+                }
             }
         }
 
@@ -50,8 +68,6 @@ body {
                 height: 40px;
                 margin-bottom: 16px;
                 }
-            
-                
             }
         }
 
@@ -82,6 +98,23 @@ body {
                 height: 40px;
             }
         }
+
+        .image {
+            img {
+                width: 700px;
+                height: auto;
+
+                @include mixins.tablet {
+                    width: 450px;
+                    height: auto;
+                    padding: 20px;
+                }
+
+                @include mixins.mobile {
+                    display: none;
+                }
+            }
+        }
     }
 
 .container-center-product-page {
@@ -98,18 +131,36 @@ body {
             margin: 20px;
             margin-bottom: 80px;
 
+            @include mixins.tablet{
+                flex-direction: column;
+                margin-bottom: 50px;
+            }
+
+            @include mixins.mobile{
+                flex-direction: column;
+                margin-bottom: 50px;
+            }
+
             .logo-box{
                 display: flex;
                 align-items: center;
-                flex-direction: row;
+                flex-direction: row;                
 
                 .logo {
                     margin-right: 45px;
 
+                    @include mixins.tablet{
+                        margin-bottom: 20px;
+                    }
+
+                    @include mixins.mobile{
+                        margin-bottom: 20px;
+                    }
+
                     h1 {
                         font-family: variables.$secundary-font;
                         font-size: 51px;
-                        color: variables.$primary-color;
+                        color: variables.$primary-color;                                            
                     }
     
                     h2 {
@@ -125,55 +176,138 @@ body {
                 }
             }
 
-            .buttons {
+            .buttons {                  
+
                 .product-register {
                     width: 271px;
                     height: 55px;
                     margin-right: 16px;
+
+                    @include mixins.tablet{
+                        width: 200px;
+                        height: 40px;
+                    }
+
+                    @include mixins.mobile{
+                        width: 200px;
+                        height: 40px;
+                    }
                 }
 
                 .button--red {
                     width: 101px;
                     height: 55px;
+
+                    @include mixins.tablet{
+                        width: 80px;
+                        height: 40px;
+                    }
+
+                    @include mixins.mobile{
+                        width: 80px;
+                        height: 40px;
+                    }
                 }           
             }
         }
 
         section {
             @include mixins.flex-center;
-            margin: 0 0 74px 70px;
+            margin: 0 0px 74px 70px;
+
+            @include mixins.tablet{
+                font-size: 20px;
+                margin: 0 0px 50px 20px;
+            }
+        
+            @include mixins.mobile{
+                flex-direction: column;
+                align-items: initial;
+                margin: 0 0px 50px 20px;
+            }
             
             .my-store {
                 font-size: 32px;
                 color: variables.$primary-color;
+
+                @include mixins.tablet{
+                    font-size: 20px;
+                }
+            
+                @include mixins.mobile{
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                }
             }
             
             .search {
                 display: flex;
                 flex-direction: row;
-                width: 375px;
-                height: 50px;
-                margin-right: 18px;
-            }
+                margin-right: 20px;           
 
-            .button--purple {
-                font-size: 16px;
-                width: 131px;
-                height: 50px;
-            }
+                input.search {
+                    width: 375px;
+                    height: 50px;
+
+                    @include mixins.tablet {
+                        width: 300px;
+                        height: 40px;
+                    }
+    
+                    @include mixins.mobile {
+                        width: 300px;
+                        height: 40px;
+                    }
+                }
+
+                .button--purple {
+                    font-size: 16px;
+                    width: 131px;
+                    height: 50px;
+    
+                    @include mixins.tablet {
+                        width: 100px;
+                        height: 40px;
+                        font-size: 14px;
+                    }
+    
+                    @include mixins.mobile {
+                        width: 100px;
+                        height: 40px;
+                        font-size: 14px;
+                    }
+                }
+            }            
         }
 
         main {
+            
             .product-list {
                 @include mixins.flex-center;
                 list-style: none;
                 flex-wrap: wrap;
-                
+
+                @include mixins.tablet {
+                    justify-content: center;
+                }
+
+                @include mixins.mobile {
+                    justify-content: center;                    
+                }
                 
                 .product-list-item {
                     background-color: rgba($color: variables.$container-color1, $alpha: 0.18);
+
                     border-radius: 16px;
-                    margin-bottom: 54px;
+                    margin: 20px 20px 54px 20px;
+
+                    @include mixins.tablet {
+                        margin: 20px;
+                    }
+    
+                    @include mixins.mobile {
+                        margin: 20px;                  
+                    }
 
                     .image {
                         width: 200px;
@@ -211,6 +345,14 @@ body {
         footer {
             text-align: center;
             padding: 50px;
+
+            @include mixins.tablet{
+                padding: 10px 10px 50px 10px;
+            }
+
+            @include mixins.mobile{
+                padding: 10px 10px 50px 10px;
+            }
             
             .copyright {
                 p {
@@ -233,7 +375,7 @@ body {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 30px;
+                margin-bottom: 30px;    
                 
                 p {
                     color: variables.$primary-color;
@@ -268,6 +410,14 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    @include mixins.tablet{
+                        width: 200px;
+                    }
+        
+                    @include mixins.mobile{
+                        width: 200px;
+                    }
                     
                     a {
                         color: variables.$primary-color;
@@ -280,7 +430,15 @@ body {
 ::placeholder {
     font-size: 20px;
     color: variables.$placeholder-color;
-    font-weight: 300;    
+    font-weight: 300;   
+    
+    @include mixins.tablet {
+        font-size: 14px;
+    }
+
+    @include mixins.mobile {
+        font-size: 14px;
+    }
 }
 
 a {
@@ -295,6 +453,14 @@ a {
     border-radius: 7px;
     text-align: center;
     cursor: pointer; 
+
+    @include mixins.tablet{
+        font-size: 14px;
+    }
+
+    @include mixins.mobile{
+        font-size: 14px;
+    }
 }
 
 .button--purple:hover {
@@ -312,6 +478,14 @@ a {
     border-radius: 7px;
     text-align: center;
     cursor: pointer;
+
+    @include mixins.tablet{
+        font-size: 16px;
+    }
+
+    @include mixins.mobile{
+        font-size: 16px;
+    }
 }
 
 .button--red:hover {

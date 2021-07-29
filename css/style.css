@@ -14,9 +14,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1520px;
+  max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
+  padding: 20px;
+}
+.container-center-login main {
+  margin-right: 20px;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-login main {
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-login main {
+    margin: 0 auto;
+  }
 }
 .container-center-login main header.logo {
   text-align: center;
@@ -28,6 +43,11 @@ body {
   color: white;
   line-height: 1;
 }
+@media (max-width: 720px) {
+  .container-center-login main header.logo h1 {
+    font-size: 80px;
+  }
+}
 .container-center-login main header.logo h2 {
   font-family: "Lato", sans-serif;
   font-size: 26px;
@@ -35,6 +55,11 @@ body {
   color: #BFBFBF;
   margin-bottom: 89px;
   line-height: 1;
+}
+@media (max-width: 720px) {
+  .container-center-login main header.logo h2 {
+    font-size: 20px;
+  }
 }
 .container-center-login main .email-login {
   display: flex;
@@ -68,9 +93,26 @@ body {
   width: 316px;
   height: 40px;
 }
+.container-center-login .image img {
+  width: 700px;
+  height: auto;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-login .image img {
+    width: 450px;
+    height: auto;
+    padding: 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-login .image img {
+    display: none;
+  }
+}
 
 .container-center-product-page {
-  max-width: 1366px;
+  max-width: 1300px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -89,6 +131,19 @@ body {
   margin: 20px;
   margin-bottom: 80px;
 }
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container header {
+    flex-direction: column;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container header {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
 .container-center-product-page .container header .logo-box {
   display: flex;
   align-items: center;
@@ -96,6 +151,17 @@ body {
 }
 .container-center-product-page .container header .logo-box .logo {
   margin-right: 45px;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container header .logo-box .logo {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container header .logo-box .logo {
+    margin-bottom: 20px;
+  }
 }
 .container-center-product-page .container header .logo-box .logo h1 {
   font-family: "Lato", sans-serif;
@@ -116,31 +182,113 @@ body {
   height: 55px;
   margin-right: 16px;
 }
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container header .buttons .product-register {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container header .buttons .product-register {
+    width: 200px;
+    height: 40px;
+  }
+}
 .container-center-product-page .container header .buttons .button--red {
   width: 101px;
   height: 55px;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container header .buttons .button--red {
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container header .buttons .button--red {
+    width: 80px;
+    height: 40px;
+  }
 }
 .container-center-product-page .container section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 74px 70px;
+  margin: 0 0px 74px 70px;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container section {
+    font-size: 20px;
+    margin: 0 0px 50px 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container section {
+    flex-direction: column;
+    align-items: initial;
+    margin: 0 0px 50px 20px;
+  }
 }
 .container-center-product-page .container section .my-store {
   font-size: 32px;
   color: white;
 }
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container section .my-store {
+    font-size: 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container section .my-store {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
 .container-center-product-page .container section .search {
   display: flex;
   flex-direction: row;
+  margin-right: 20px;
+}
+.container-center-product-page .container section .search input.search {
   width: 375px;
   height: 50px;
-  margin-right: 18px;
 }
-.container-center-product-page .container section .button--purple {
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container section .search input.search {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container section .search input.search {
+    width: 300px;
+    height: 40px;
+  }
+}
+.container-center-product-page .container section .search .button--purple {
   font-size: 16px;
   width: 131px;
   height: 50px;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container section .search .button--purple {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container section .search .button--purple {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
 .container-center-product-page .container main .product-list {
   display: flex;
@@ -149,10 +297,32 @@ body {
   list-style: none;
   flex-wrap: wrap;
 }
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container main .product-list {
+    justify-content: center;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container main .product-list {
+    justify-content: center;
+  }
+}
 .container-center-product-page .container main .product-list .product-list-item {
   background-color: rgba(191, 191, 191, 0.18);
   border-radius: 16px;
-  margin-bottom: 54px;
+  margin: 20px 20px 54px 20px;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container main .product-list .product-list-item {
+    margin: 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container main .product-list .product-list-item {
+    margin: 20px;
+  }
 }
 .container-center-product-page .container main .product-list .product-list-item .image {
   width: 200px;
@@ -179,6 +349,17 @@ body {
 .container-center-product-page .container footer {
   text-align: center;
   padding: 50px;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container footer {
+    padding: 10px 10px 50px 10px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container footer {
+    padding: 10px 10px 50px 10px;
+  }
 }
 .container-center-product-page .container footer .copyright p {
   color: white;
@@ -226,6 +407,17 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 721px) and (max-width: 1160px) {
+  .container-center-product-page .container footer .login-page {
+    width: 200px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .container-center-product-page .container footer .login-page {
+    width: 200px;
+  }
+}
 .container-center-product-page .container footer .login-page a {
   color: white;
 }
@@ -234,6 +426,17 @@ body {
   font-size: 20px;
   color: #8D8BA4;
   font-weight: 300;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  ::placeholder {
+    font-size: 14px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  ::placeholder {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -248,6 +451,17 @@ a {
   border-radius: 7px;
   text-align: center;
   cursor: pointer;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .button--purple {
+    font-size: 14px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .button--purple {
+    font-size: 14px;
+  }
 }
 
 .button--purple:hover {
@@ -265,6 +479,17 @@ a {
   border-radius: 7px;
   text-align: center;
   cursor: pointer;
+}
+@media (min-width: 721px) and (max-width: 1160px) {
+  .button--red {
+    font-size: 16px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 720px) {
+  .button--red {
+    font-size: 16px;
+  }
 }
 
 .button--red:hover {
