@@ -1,7 +1,7 @@
 @use '_variables.scss';
 @use '_mixins.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Poppins:wght@300;400;700;900&display=swap');
 
 * {
     margin: 0;
@@ -51,8 +51,7 @@ body {
                 margin-bottom: 16px;
                 }
             
-                :focus {
-                    border: 1px solid variables.$button-color-main;
+                
             }
         }
 
@@ -84,7 +83,6 @@ body {
             }
         }
     }
-}
 
 .container-center-product-page {
     @include mixins.container-center-products-page;
@@ -143,7 +141,7 @@ body {
 
         section {
             @include mixins.flex-center;
-            margin: 0 74px 70px;
+            margin: 0 0 74px 70px;
             
             .my-store {
                 font-size: 32px;
@@ -169,22 +167,114 @@ body {
             .product-list {
                 @include mixins.flex-center;
                 list-style: none;
-
+                flex-wrap: wrap;
+                
+                
                 .product-list-item {
                     background-color: rgba($color: variables.$container-color1, $alpha: 0.18);
                     border-radius: 16px;
+                    margin-bottom: 54px;
+
+                    .image {
+                        width: 200px;
+                        height: auto;
+                        margin: 20px auto;
+                    }
+
+                    .text {
+                        font-size: 20px;
+                        color: variables.$text-color;
+                        margin-left: 36px;
+                        margin-bottom: 30px;
+
+                        :first-child {
+                            margin-bottom: 17px;
+                        }
+                    }
+
+                    .button {
+
+                        button {
+                            width: 131px;
+                            height: 40px;
+                            margin: 0 20px 20px 20px;
+                        }
+                    }
                 }
 
                 .bg-different {
                     background-color: rgba($color: variables.$container-color2, $alpha: 0.18);
                 }
             }
-
-            
-
         }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            
+            .copyright {
+                p {
+                    color: variables.$primary-color;
+                    font-size: 16px;
+
+                    &::after {
+                        content:'';
+                        width: 100px;
+                        height: 4px;
+                        background-color: variables.$button-color-main;
+                        display: block;
+                        margin: 10px auto;
+                    }
+                } 
+            }
+
+            .social-media {                 
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+                
+                p {
+                    color: variables.$primary-color;
+                    font-weight: 300;
+                    font-size: 16px;
+                    margin-right: 10px;
+                }
+                
+                ul {
+                    display: flex;
+                    list-style: none;
+                    
+                    li {
+                        padding: 10px;
+                        
+                        a {
+                            color : variables.$primary-color;
+                            
+                            i {
+                                font-size: 25px;  
+                            }
+                        }
+                    }
+                }
+            } 
+            
+            .login-page {
+                 
+                    width: 400px;
+                    height: 40px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    a {
+                        color: variables.$primary-color;
+                    }
+            }
+       }
     }
-    
 }
 
 ::placeholder {
@@ -216,7 +306,7 @@ a {
 
 .button--red {
     background-color: variables.$button-color--red;
-    color: variables.$text-color;
+    color: variables.$primary-color;
     border: none;
     font-size: 20px;
     border-radius: 7px;
@@ -239,8 +329,8 @@ input {
     padding: 22px;
     color: variables.$text-color;
     font-size: 16px;
+
+    &:focus {
+        border: 1px solid variables.$button-color-main;
+    }
 }
-
-
-
-
